@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharkWalletCripto", "SharkWalletCripto\SharkWalletCripto.csproj", "{30B00E5B-ADEA-4EEC-8746-677BC12C7903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Core.Wallet", "API.Core.Wallet\API.Core.Wallet.csproj", "{BA670266-F998-4A98-BB03-92990C821588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Data.Core", "API.Data.Core\API.Data.Core.csproj", "{55136682-5CF1-4D73-BF9C-0D2DB66B79F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Generic.Core", "API.Generic.Core\API.Generic.Core.csproj", "{DF35D104-A901-433D-9C26-4A86E1C81348}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Uses.Cases", "API.Uses.Cases\API.Uses.Cases.csproj", "{40A1B739-CCD8-4EFA-B3AC-16C94AF691E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Middleware", "Middleware\Middleware.csproj", "{44031E38-FFE1-4540-86A9-D838D6572EC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30B00E5B-ADEA-4EEC-8746-677BC12C7903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B00E5B-ADEA-4EEC-8746-677BC12C7903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B00E5B-ADEA-4EEC-8746-677BC12C7903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B00E5B-ADEA-4EEC-8746-677BC12C7903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA670266-F998-4A98-BB03-92990C821588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA670266-F998-4A98-BB03-92990C821588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA670266-F998-4A98-BB03-92990C821588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA670266-F998-4A98-BB03-92990C821588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55136682-5CF1-4D73-BF9C-0D2DB66B79F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55136682-5CF1-4D73-BF9C-0D2DB66B79F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55136682-5CF1-4D73-BF9C-0D2DB66B79F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55136682-5CF1-4D73-BF9C-0D2DB66B79F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF35D104-A901-433D-9C26-4A86E1C81348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF35D104-A901-433D-9C26-4A86E1C81348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF35D104-A901-433D-9C26-4A86E1C81348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF35D104-A901-433D-9C26-4A86E1C81348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A1B739-CCD8-4EFA-B3AC-16C94AF691E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A1B739-CCD8-4EFA-B3AC-16C94AF691E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A1B739-CCD8-4EFA-B3AC-16C94AF691E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A1B739-CCD8-4EFA-B3AC-16C94AF691E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44031E38-FFE1-4540-86A9-D838D6572EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44031E38-FFE1-4540-86A9-D838D6572EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44031E38-FFE1-4540-86A9-D838D6572EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44031E38-FFE1-4540-86A9-D838D6572EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {073F98D6-87C5-48AF-98FD-E97CDB18B1CC}
+	EndGlobalSection
+EndGlobal
