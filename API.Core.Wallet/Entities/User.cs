@@ -23,5 +23,6 @@ namespace API.Core.Wallet.Entities
         public int AccountID { get; set; }
         public Wallet? account { get; set; }
 
+        //asdad
     }
 }
