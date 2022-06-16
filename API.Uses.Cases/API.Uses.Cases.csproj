@@ -11,4 +11,8 @@
     <Folder Include="UOWork\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\API.Data.Core\API.Data.Core.csproj" />
+  </ItemGroup>
+
 </Project>
