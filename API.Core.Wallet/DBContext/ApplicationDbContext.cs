@@ -16,6 +16,6 @@ namespace API.Core.Wallet.DBContext
         }
         public DbSet<MoneyCurrency>? MoneyCurrencies { get; set; }
         public DbSet<User>? Users { get; set; }
-        public DbSet<Entities.Wallet>? Wallets { get; set; }
+        public DbSet<Wallets>? Wallets { get; set; }
     }
 }
