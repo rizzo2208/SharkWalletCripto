@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API.Uses.Cases.UOWork
 {
-    internal interface IUOWork
+    public interface IUOWork
     {
     }
 }

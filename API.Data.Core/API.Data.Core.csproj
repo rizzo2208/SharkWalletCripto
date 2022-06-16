@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repository\" />
-    <Folder Include="Repository\Classes\" />
-    <Folder Include="Repository\InterfacesRepo\" />
+    <Compile Remove="Repository\Classes\**" />
+    <Compile Remove="Repository\InterfacesRepo\**" />
+    <EmbeddedResource Remove="Repository\Classes\**" />
+    <EmbeddedResource Remove="Repository\InterfacesRepo\**" />
+    <None Remove="Repository\Classes\**" />
+    <None Remove="Repository\InterfacesRepo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.Core.Wallet\API.Core.Wallet.csproj" />
+    <ProjectReference Include="..\API.Generic.Core\API.Generic.Core.csproj" />
   </ItemGroup>
 
 </Project>
