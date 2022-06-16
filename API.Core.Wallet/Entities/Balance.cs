@@ -1,25 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace API.Core.Wallet.Entities
 {
-    public class MoneyCurrency
+    public class Balance
     {
         [Key]
-        public int MoneyCurrencyID { get; set; }
+        public int BalanceID { get; set; }
 
         [Required]
-        public string moneyCurrency { get; set; }
-
-        
-
-
-
-
+        public string? balance { get; set; }
     }
 }
