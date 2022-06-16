@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace API.Uses.Cases.UOWork
+namespace API.Uses.Cases.Services
 {
-    public class UOWork
+    internal class UserServices
     {
-
     }
 }
