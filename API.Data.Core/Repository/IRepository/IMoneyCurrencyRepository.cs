@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace API.Data.Core.Repository.IRepository
 {
-    internal interface IMoneyCurrencyRepository : IGenericRepository<MoneyCurrency>
+    public interface IMoneyCurrencyRepository : IGenericRepository<MoneyCurrency>
     {
     }
 }
