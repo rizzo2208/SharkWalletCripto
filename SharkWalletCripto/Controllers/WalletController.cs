@@ -1,7 +1,6 @@
-﻿using API.Uses.Cases.UOWork;
-using Microsoft.AspNetCore.Authorization;
+﻿using API.Core.Wallet.Entities;
+using API.Uses.Cases.UOWork;
 using Microsoft.AspNetCore.Mvc;
-using API.Core.Wallet.Entities;
 
 namespace SharkWalletCripto.Controllers
 {
