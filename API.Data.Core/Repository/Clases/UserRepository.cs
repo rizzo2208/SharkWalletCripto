@@ -9,6 +9,15 @@ namespace API.Data.Core.Repository.Clases
     {
         public UserRepository(ApplicationDbContext db) : base(db)
         {
+
+        }
+        public User GetByEmail(string email)
+        {
+            return _db.Users.FirstOrDefault(a => a.Email == email);
+        }
+        public bool ExisteUsuario(string email)
+        {
+            return _db.Users.Any(a => a.Email == email);
         }
     }
 }
