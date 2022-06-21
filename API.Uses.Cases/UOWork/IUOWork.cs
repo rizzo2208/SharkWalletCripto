@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using API.Data.Core.Repository.IRepository;
 
 namespace API.Uses.Cases.UOWork
 {
-    internal interface IUOWork
+    public interface IUOWork : IDisposable
     {
+        IUserRepository UserRepo { get; }
+        IWalletRepository WalletRepo { get; }
+        IMoneyCurrencyRepository MoneyCurrencyRepo { get; }
+        IBalanceRepository BalanceRepo { get; }
+
+        void Save();
     }
 }
