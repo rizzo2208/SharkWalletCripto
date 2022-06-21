@@ -93,7 +93,7 @@ namespace API.Uses.Cases.Services
             {
                 new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
                 new Claim(JwtRegisteredClaimNames.NameId, usuario.UserID.ToString()),
-                
+                //new Claim(JwtRegisteredClaimNames.Name, usuario.Name),
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
