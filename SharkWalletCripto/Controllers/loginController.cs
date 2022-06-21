@@ -7,7 +7,9 @@ namespace SharkWalletCripto.Controllers
     [ApiController]
     public class loginController : ControllerBase
     {
-        private readonly IUserService _usuarioService;
-        private readonly IUnitOfWork _uow;
+        //private readonly IUserService _usuarioService;
+        //private readonly IUnitOfWork _uow;
+
+
     }
 }
