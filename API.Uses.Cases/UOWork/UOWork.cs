@@ -1,11 +1,6 @@
 ﻿using API.Core.Wallet.DBContext;
 using API.Data.Core.Repository.Clases;
 using API.Data.Core.Repository.IRepository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Uses.Cases.UOWork
 {
@@ -18,6 +13,8 @@ namespace API.Uses.Cases.UOWork
         public IMoneyCurrencyRepository MoneyCurrencyRepo { get; private set; }
 
         public IWalletRepository WalletRepo { get; private set; }
+
+        public IBalanceRepository BalanceRepo{ get; private set; }
 
 
 

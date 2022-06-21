@@ -1,9 +1,4 @@
 ﻿using API.Data.Core.Repository.IRepository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Uses.Cases.UOWork
 {
@@ -12,6 +7,7 @@ namespace API.Uses.Cases.UOWork
         IUserRepository UserRepo { get; }
         IWalletRepository WalletRepo { get; }
         IMoneyCurrencyRepository MoneyCurrencyRepo { get; }
+        IBalanceRepository BalanceRepo { get; }
 
         void Save();
     }
