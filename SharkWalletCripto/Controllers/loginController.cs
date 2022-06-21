@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using API.Uses.Cases.Services;
+using API.Uses.Cases.UOWork;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SharkWalletCripto.Controllers
@@ -7,8 +8,8 @@ namespace SharkWalletCripto.Controllers
     [ApiController]
     public class loginController : ControllerBase
     {
-        //private readonly IUserService _usuarioService;
-        //private readonly IUnitOfWork _uow;
+        private readonly IUserServices _usuarioService;
+        private readonly IUOWork _uow;
 
 
     }
