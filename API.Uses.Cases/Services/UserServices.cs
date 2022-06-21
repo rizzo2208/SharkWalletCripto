@@ -59,10 +59,8 @@ namespace API.Uses.Cases.Services
                     return null;
                 }
                 //aca deberia mappear a un UserResponse
-                response.Email = email;
-                response.UserName = user.Username;
-                response.Id = user.Id;
-                response.Role = user.Role;
+                response.Email = Email;
+                response.password = password;
                 //Devuelvo la respuesta si esta todo bien
                 return response;
             }
