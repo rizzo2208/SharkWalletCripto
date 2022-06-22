@@ -11,7 +11,7 @@ namespace API.Core.Wallet.Entities
     public class MoneyCurrency
     {
         [Key]
-        public int MoneyCurrencyID { get; set; }
+        public string MoneyCurrencyID { get; set; }
 
         [Required]
         public string moneyCurrency { get; set; }
