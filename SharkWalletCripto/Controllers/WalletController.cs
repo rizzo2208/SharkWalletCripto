@@ -15,7 +15,6 @@ namespace SharkWalletCripto.Controllers
         public WalletController(IUOWork context)
         {
             _context = context;
-
         }
 
         //GET

@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CoinGeckoAsyncApi" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\API.Core.Wallet\API.Core.Wallet.csproj" />
     <ProjectReference Include="..\API.Generic.Core\API.Generic.Core.csproj" />
   </ItemGroup>

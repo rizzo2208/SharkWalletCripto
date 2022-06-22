@@ -10,5 +10,7 @@ namespace API.Core.Wallet.Autentication.Response
         public string? Email { get; set; } 
         [Required]
         public string? password { get; set; }
+
+        public decimal? valor { get; set; }
     }
 }
