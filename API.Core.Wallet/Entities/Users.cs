@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace API.Core.Wallet.Entities
 {
-    public class User
+    public class Users
     {
         [Key]
         public int UserID { get; set; }

@@ -10,11 +10,11 @@ namespace API.Core.Wallet.Entities
 
         [ForeignKey("Balance")]
         public int BalanceID { get; set; }
-        public Balance? balance { get; set; }
+        public Balances? balance { get; set; }
 
         [ForeignKey("Currency")]
         public string MoneyCurrencyID { get; set; }
-        public MoneyCurrency? moneycurrency { get; set; }
+        public MoneyCurrencys? moneycurrency { get; set; }
 
        
     }

@@ -26,7 +26,7 @@ namespace SharkWalletCripto.Controllers
         /// <response code="404">Usuario no encontrado</response>
         /// <response code="500">Oops! No se pudo buscar el User</response>
         [HttpGet]
-        public ActionResult<IEnumerable<Balance>> Get()
+        public ActionResult<IEnumerable<Balances>> Get()
         {
             var entidad = _context.BalanceRepo.GetAll();//llama a todos los registros activos
             return Ok(entidad);
@@ -42,7 +42,7 @@ namespace SharkWalletCripto.Controllers
         /// <response code="404">Usuario no encontrado</response>
         /// <response code="500">Oops! No se pudo buscar el User</response>
         [HttpPost]
-        public ActionResult Post([FromBody] Balance balance)
+        public ActionResult Post([FromBody] Balances balance)
         {
             _context.BalanceRepo.Insert(balance);//agrega un registro
             _context.Save();

@@ -13,9 +13,9 @@ namespace API.Core.Wallet.DBContext
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<MoneyCurrency>? MoneyCurrencies { get; set; }
-        public DbSet<User>? Users { get; set; }
+        public DbSet<MoneyCurrencys>? MoneyCurrencies { get; set; }
+        public DbSet<Users>? Users { get; set; }
         public DbSet<Wallets>? Wallets { get; set; } // Prueba de cambio
-        public DbSet<Balance>? Balances { get; set; }  
+        public DbSet<Balances>? Balances { get; set; }  
     }
 }

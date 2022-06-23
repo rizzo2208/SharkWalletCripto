@@ -22,7 +22,7 @@ namespace SharkWalletCripto.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("API.Core.Wallet.Entities.Balance", b =>
+            modelBuilder.Entity("API.Core.Wallet.Entities.Balances", b =>
                 {
                     b.Property<int>("BalanceID")
                         .ValueGeneratedOnAdd()
@@ -36,13 +36,16 @@ namespace SharkWalletCripto.Migrations
 
                     b.HasKey("BalanceID");
 
-                    b.ToTable("Balance");
+                    b.ToTable("Balances");
                 });
 
-            modelBuilder.Entity("API.Core.Wallet.Entities.MoneyCurrency", b =>
+            modelBuilder.Entity("API.Core.Wallet.Entities.MoneyCurrencys", b =>
                 {
-                    b.Property<string>("MoneyCurrencyID")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("MoneyCurrencyID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MoneyCurrencyID"), 1L, 1);
 
                     b.Property<string>("moneyCurrency")
                         .IsRequired()
@@ -53,7 +56,7 @@ namespace SharkWalletCripto.Migrations
                     b.ToTable("MoneyCurrencies");
                 });
 
-            modelBuilder.Entity("API.Core.Wallet.Entities.User", b =>
+            modelBuilder.Entity("API.Core.Wallet.Entities.Users", b =>
                 {
                     b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
@@ -104,18 +107,21 @@ namespace SharkWalletCripto.Migrations
 
                     b.Property<string>("MoneyCurrencyID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MoneyCurrencyID1")
+                        .HasColumnType("int");
 
                     b.HasKey("AccountID");
 
                     b.HasIndex("BalanceID");
 
-                    b.HasIndex("MoneyCurrencyID");
+                    b.HasIndex("MoneyCurrencyID1");
 
                     b.ToTable("Wallets");
                 });
 
-            modelBuilder.Entity("API.Core.Wallet.Entities.User", b =>
+            modelBuilder.Entity("API.Core.Wallet.Entities.Users", b =>
                 {
                     b.HasOne("API.Core.Wallet.Entities.Wallets", "account")
                         .WithMany()
@@ -128,17 +134,15 @@ namespace SharkWalletCripto.Migrations
 
             modelBuilder.Entity("API.Core.Wallet.Entities.Wallets", b =>
                 {
-                    b.HasOne("API.Core.Wallet.Entities.Balance", "balance")
+                    b.HasOne("API.Core.Wallet.Entities.Balances", "balance")
                         .WithMany()
                         .HasForeignKey("BalanceID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("API.Core.Wallet.Entities.MoneyCurrency", "moneycurrency")
+                    b.HasOne("API.Core.Wallet.Entities.MoneyCurrencys", "moneycurrency")
                         .WithMany()
-                        .HasForeignKey("MoneyCurrencyID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MoneyCurrencyID1");
 
                     b.Navigation("balance");
 

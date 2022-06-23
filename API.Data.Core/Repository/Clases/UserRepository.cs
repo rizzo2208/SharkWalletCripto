@@ -5,13 +5,13 @@ using API.Generic.Core.Generics;
 
 namespace API.Data.Core.Repository.Clases
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserRepository : GenericRepository<Users>, IUserRepository
     {
         public UserRepository(ApplicationDbContext db) : base(db)
         {
 
         }
-        public User GetByEmail(string email)
+        public Users GetByEmail(string email)
         {
             return _db.Users.FirstOrDefault(a => a.Email == email);
         }
