@@ -3,7 +3,7 @@ using API.Generic.Core.Generics;
 
 namespace API.Data.Core.Repository.IRepository
 {
-    public interface IBalanceRepository : IGenericRepository<Balance>
+    public interface IBalanceRepository : IGenericRepository<Balances>
     {
 
     }

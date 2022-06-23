@@ -10,4 +10,8 @@
     <Folder Include="Logger\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CoinGeckoAsyncApi" Version="1.7.0" />
+  </ItemGroup>
+
 </Project>

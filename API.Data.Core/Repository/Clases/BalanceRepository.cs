@@ -5,7 +5,7 @@ using API.Generic.Core.Generics;
 
 namespace API.Data.Core.Repository.Clases
 {
-    public class BalanceRepository : GenericRepository<Balance>, IBalanceRepository
+    public class BalanceRepository : GenericRepository<Balances>, IBalanceRepository
     {
         public BalanceRepository(ApplicationDbContext db) : base(db)
         {

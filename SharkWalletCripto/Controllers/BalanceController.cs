@@ -1,18 +1,17 @@
 ﻿using API.Core.Wallet.Entities;
 using API.Uses.Cases.UOWork;
 using Microsoft.AspNetCore.Mvc;
-
 namespace SharkWalletCripto.Controllers
 {
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class BalanceController : ControllerBase
     {
-
+        
         private readonly IUOWork _context;
 
-        public UserController(IUOWork context)
+        public BalanceController(IUOWork context)
         {
             _context = context;
         }
@@ -22,14 +21,14 @@ namespace SharkWalletCripto.Controllers
         /// <summary>
         /// Api para seleccionar todos los clientes de la base de datos.
         /// </summary>
-        /// <param name="User">Estructura</param>
+        /// <param name="Balance">Estructura</param>
         /// <response code="200">Se creo correctamente</response>
         /// <response code="404">Usuario no encontrado</response>
         /// <response code="500">Oops! No se pudo buscar el User</response>
         [HttpGet]
-        public ActionResult<IEnumerable<Users>> Get()
+        public ActionResult<IEnumerable<Balances>> Get()
         {
-            var entidad = _context.UserRepo.GetAll();//llama a todos los registros activos
+            var entidad = _context.BalanceRepo.GetAll();//llama a todos los registros activos
             return Ok(entidad);
         }
 
@@ -43,36 +42,11 @@ namespace SharkWalletCripto.Controllers
         /// <response code="404">Usuario no encontrado</response>
         /// <response code="500">Oops! No se pudo buscar el User</response>
         [HttpPost]
-        public ActionResult Post([FromBody] Users user)
+        public ActionResult Post([FromBody] Balances balance)
         {
-            _context.UserRepo.Insert(user);//agrega un registro
+            _context.BalanceRepo.Insert(balance);//agrega un registro
             _context.Save();
             return Ok();
-        }
-
-        //PUT
-        //-----------------------------------------------------------
-        /// <summary>
-        /// modifica el registro que necesitamos
-        /// </summary>
-        /// <response code="200">Se creo correctamente</response>
-        /// <response code="404">Usuario no encontrado</response>
-        /// <response code="500">Oops! No se pudo buscar el User</response>
-
-        [HttpPut("{id}")]
-        public ActionResult Put([FromBody] Users user, int id)
-        {
-            if (id != user.UserID)
-            {
-                return BadRequest();//NO se encontro id del registro
-            }
-            else
-            {
-                _context.UserRepo.Update(user);//modifica registro
-                _context.Save();
-                return Ok();
-            }
-
         }
 
         //DELETE
@@ -88,15 +62,15 @@ namespace SharkWalletCripto.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var entity = _context.UserRepo.GetById(id);
+            var entity = _context.BalanceRepo.GetById(id);
 
             if (entity == null)
             {
-                return NotFound("No Se Encontro El Regisro Solicitado");
+                return NotFound("No Se Encontro El Registro Solicitado");
             }
             else
             {
-                _context.UserRepo.Delete(id);//borra el registro
+                _context.BalanceRepo.Delete(id);//borra el registro
                 _context.Save();
             }
 
@@ -107,3 +81,5 @@ namespace SharkWalletCripto.Controllers
         }
     }
 }
+
+
