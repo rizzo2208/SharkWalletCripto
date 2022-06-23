@@ -13,7 +13,7 @@ namespace API.Core.Wallet.Entities
         public Balance? balance { get; set; }
 
         [ForeignKey("Currency")]
-        public int MoneyCurrencyID { get; set; }
+        public string MoneyCurrencyID { get; set; }
         public MoneyCurrency? moneycurrency { get; set; }
 
        
