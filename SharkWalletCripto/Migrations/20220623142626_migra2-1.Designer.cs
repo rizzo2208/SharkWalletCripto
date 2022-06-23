@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace SharkWalletCripto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220623142153_migra2-1")]
+    [Migration("20220623142626_migra2-1")]
     partial class migra21
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
