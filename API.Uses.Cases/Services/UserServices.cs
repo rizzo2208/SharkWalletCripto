@@ -128,30 +128,6 @@ namespace API.Uses.Cases.Services
         }
         #endregion CrearPassHash
 
-        #region currencyval
-        public async Task<UserResponse> CurrencyValAsync(decimal valor)
-        {
-            UserResponse response = new UserResponse();
-        HttpClient httpClient = new HttpClient();
-        JsonSerializerSettings serializerSettings = new JsonSerializerSettings();
-
-        PingClient pingClient = new PingClient(httpClient, serializerSettings);
-        SimpleClient simpleClient = new SimpleClient(httpClient, serializerSettings);
-// Check CoinGecko API status
-        if ((await pingClient.GetPingAsync()).GeckoSays != string.Empty)
-            {
-            // Getting current price of tether in usd
-            string ids = "bitcoin";
-            string vsCurrencies = "usd";
-            decimal? valorcito = ((await simpleClient.GetSimplePrice(new[] { ids }, new[] { vsCurrencies }))[ids][vsCurrencies]);
-                response.valor = valorcito;
-            return response;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        #endregion currencyval
+        
     }
 }
