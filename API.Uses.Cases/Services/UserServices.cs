@@ -5,6 +5,8 @@ using API.Uses.Cases.UOWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using CoinGecko.Clients;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -29,7 +31,7 @@ namespace API.Uses.Cases.Services
             byte[] passwordHash;
             byte[] passwordSalt;
             CrearPassHash(password, out passwordHash, out passwordSalt);
-            User usuario = new User();
+            Users usuario = new Users();
             usuario.Name = user.UserName;
             usuario.Email = user.Email;
             usuario.PasswordHash = passwordHash;
@@ -52,7 +54,7 @@ namespace API.Uses.Cases.Services
             {
                 UserResponse response = new UserResponse();
                 //traigo el usuario, por el email
-                User user = _uOW.UserRepo.GetByEmail(Email);
+                Users user = _uOW.UserRepo.GetByEmail(Email);
                 //verifico si el password ingresado es el mismo del usuario en la DB
                 if (!VerificarPassword(password, user.PasswordHash, user.PasswordSalt))
                 {
@@ -126,5 +128,6 @@ namespace API.Uses.Cases.Services
         }
         #endregion CrearPassHash
 
+        
     }
 }

@@ -1,4 +1,5 @@
 using API.Core.Wallet.DBContext;
+using API.Uses.Cases.UOWork;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SharkWalletCripto"));
 });
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<IUOWork, UOWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

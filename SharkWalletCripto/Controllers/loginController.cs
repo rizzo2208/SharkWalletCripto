@@ -11,14 +11,14 @@ namespace SharkWalletCripto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class loginController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly IUserServices _usuarioService;
 
         private readonly IUOWork _uow;
 
 
-        public loginController(IUserservices usuarioService, IUOWork uow)
+        public LoginController(IUserservices usuarioService, IUOWork uow)
         {
             _usuarioService = usuarioService;
             _uow = uow;

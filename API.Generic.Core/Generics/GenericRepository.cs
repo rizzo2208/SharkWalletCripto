@@ -35,7 +35,12 @@ namespace API.Generic.Core.Generics
         public IEnumerable<T> GetAll()
         {
             
-            return _db.Set<T>().ToList();
+            var val = _db.Set<T>().ToList();
+            if (val == null)
+            {
+                return val;
+            }
+            return val;
         }
 
         public T GetById(int? id)

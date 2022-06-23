@@ -26,6 +26,7 @@ namespace API.Uses.Cases.UOWork
             UserRepo = new UserRepository(context);
             MoneyCurrencyRepo = new MoneyCurrencyRepository(context);
             WalletRepo = new WalletRepository(context);
+            BalanceRepo = new BalanceRepository(context);
         }
 
         public void Dispose()
