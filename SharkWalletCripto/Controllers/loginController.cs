@@ -18,7 +18,9 @@ namespace SharkWalletCripto.Controllers
         private readonly IUOWork _uow;
 
 
+
         public LoginController(IUserservices usuarioService, IUOWork uow)
+
         {
             _usuarioService = usuarioService;
             _uow = uow;
@@ -33,12 +35,16 @@ namespace SharkWalletCripto.Controllers
 
                 return Unauthorized();
             }
-            var token = _usuarioService.GetToken(response);
-            return Ok(new
+            else
             {
-                token = token,
-                usuario = response
-            });
+                var token = _usuarioService.GetToken(response);
+                return Ok(new
+                            {
+                                token = token,
+                                usuario = response
+                            });
+            }
+            
         }
         [HttpPost("Registro")]
         public ActionResult RegistrarUsuario([FromBody] UserRequest user)
@@ -47,8 +53,12 @@ namespace SharkWalletCripto.Controllers
             {
                 return BadRequest("Ya existe un cuenta asociada a ese Email");
             }
-            UserResponse res = _usuarioService.Registrar(user, user.Password);
-            return Ok(res);
+            else
+            {
+                UserResponse res = _usuarioService.Registrar(user, user.Password);
+                return Ok(res);
+            }
+            
         }
     }
 }
